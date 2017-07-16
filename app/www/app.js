@@ -6,10 +6,12 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('diciomane', ['ionic',
   'ngCordova',
+  'diciomane.pages.about',
   'diciomane.pages.entry',
   'diciomane.pages.search',
   'diciomane.pages.dictionary',
   'diciomane.pages.home',
+  'diciomane.pages.categories',                             
   'diciomane.svc.dictionary',
   'diciomane.svc.database',
   'diciomane.svc.wordoftheday',
@@ -51,6 +53,14 @@ angular.module('diciomane', ['ionic',
     .state('search', {
       url: '/search',
       templateUrl: 'pages/search/_search.html'
+    })
+    .state('categories', {
+      url: '/categories/:id',
+      templateUrl: 'pages/categories/_categories.html'
+    })
+    .state('about', {
+      url: '/about',
+      templateUrl: 'pages/about/_about.html'
     })
 
   // if none of the above states are matched, use this as the fallback
